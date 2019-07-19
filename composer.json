@@ -1,0 +1,55 @@
+{
+    "name": "guiliredu/laravel-simple-recaptcha",
+    "description": "Simple Google Recaptcha validation and blade directive",
+    "keywords": [
+        "guiliredu",
+        "laravel-simple-recaptcha",
+        "recaptcha"
+    ],
+    "homepage": "https://github.com/guiliredu/laravel-simple-recaptcha",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Guilherme Redu",
+            "email": "guiilredu@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Guiliredu\\LaravelSimpleRecaptcha\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Guiliredu\\LaravelSimpleRecaptcha\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Guiliredu\\LaravelSimpleRecaptcha\\LaravelSimpleRecaptchaServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSimpleRecaptcha": "Guiliredu\\LaravelSimpleRecaptcha\\LaravelSimpleRecaptchaFacade"
+            }
+        }
+    }
+}

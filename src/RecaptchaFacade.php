@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \Guiliredu\LaravelSimpleRecaptcha\Skeleton\SkeletonClass
  */
-class LaravelSimpleRecaptchaFacade extends Facade
+class RecaptchaFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class LaravelSimpleRecaptchaFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-simple-recaptcha';
+        return 'recaptcha';
     }
 }

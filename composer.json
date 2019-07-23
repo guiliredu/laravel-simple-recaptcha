@@ -1,6 +1,6 @@
 {
     "name": "guiliredu/laravel-simple-recaptcha",
-    "description": "Simple Google Recaptcha validation and blade directive",
+    "description": "Simple Google reCAPTCHA v2 validation and blade directive",
     "keywords": [
         "guiliredu",
         "laravel-simple-recaptcha",
@@ -18,6 +18,7 @@
     ],
     "require": {
         "php": "^7.1",
+        "guzzlehttp/guzzle": "^6.3",
         "illuminate/support": "5.8.*"
     },
     "require-dev": {
@@ -37,7 +38,6 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Guiliredu\\LaravelSimpleRecaptcha\\LaravelSimpleRecaptchaServiceProvider"
+                "Guiliredu\\LaravelSimpleRecaptcha\\RecaptchaServiceProvider"
             ],
             "aliases": {
-                "LaravelSimpleRecaptcha": "Guiliredu\\LaravelSimpleRecaptcha\\LaravelSimpleRecaptchaFacade"
+                "LaravelSimpleRecaptcha": "Guiliredu\\LaravelSimpleRecaptcha\\RecaptchaFacade"
             }
         }
     }
